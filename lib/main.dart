@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pointrack/core/app_theme.dart';
+import 'package:pointrack/core/app_color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,18 +15,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: appTheme.copyWith(),
       home: const Scaffold(
         body: Center(
           child: Text(
             "Hi Milan",
             style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'GullyVF',
-                fontWeight: FontWeight.bold),
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
